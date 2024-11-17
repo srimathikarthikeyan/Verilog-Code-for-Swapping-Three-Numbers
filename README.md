@@ -22,27 +22,27 @@ Save and Document Results
 Capture the waveform output and include the results in your report for verification.
 
 # VERILOG CODE:
-// swap_three_numbers.v
-module swap_three_numbers (
+    // swap_three_numbers.v
+    module swap_three_numbers (
     input wire [7:0] a_in,
     input wire [7:0] b_in,
     input wire [7:0] c_in,
     output reg [7:0] a_out,
     output reg [7:0] b_out,
     output reg [7:0] c_out
-);
+    );
     always @(*) begin
         a_out = b_in; // Swap: a = b
         b_out = c_in; // Swap: b = c
         c_out = a_in; // Swap: c = a
     end
-endmodule
+    endmodule
 
 # TESTBENCH FOR SWAPPING THREE NUMBERS:
-// swap_three_numbers_tb.v
-`timescale 1ns / 1ps
+    // swap_three_numbers_tb.v
+    `timescale 1ns / 1ps
 
-module swap_three_numbers_tb;
+    module swap_three_numbers_tb;
     // Inputs
     reg [7:0] a;
     reg [7:0] b;
